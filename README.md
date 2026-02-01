@@ -17,9 +17,9 @@ Console-based applications focusing on core C++ syntax, logic, and flow control.
 - [Math Quiz](basics/math-quiz)
 - [ATM System](basics/atm-system)
 - **Bank Extensions (Procedural Programming)**
-  - [Extension 1](basics/Bank1)
-  - [Extension 2](basics/Bank2)
-  - [Extension 3](basics/bank3)
+  - [Extension 1](basics/Bank/Extention1)
+  - [Extension 2](basics/Bank/Extention2)
+  - [Extension 3](basics/Bank/Extention3)
 
 ---
 
