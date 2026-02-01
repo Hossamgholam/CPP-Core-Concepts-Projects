@@ -72,7 +72,7 @@ Each project or module has its own folder and README file explaining:
 ---
 
 ## ▶️ How to Run
-1. Clone the repository  
+1. Clone the repository( cpp-core-concepts-projects and try all project in it )
 2. Open the desired project’s `.sln` file using **Visual Studio**  
 3. Build the solution  
 4. Run the program from the console  
