@@ -1,97 +1,129 @@
-## 🔐 Extension 3 – System Users & Permissions
+# 🏦 Bank Management System – Extension 3  
+## User Management & Permission System
 
-### 📌 Overview
-
-Extension 3 adds a **login system** to the bank application.
-Instead of allowing direct access, users must authenticate before
-performing any operation.
-
-Each user has specific permissions that control what actions they can perform.
+This project is the third extension of the **Bank Management System** and focuses on
+transforming the application from a single-user program into a **secure multi-user system**
+with authentication and authorization.
 
 ---
 
-### 👤 User Structure
+## 📌 Overview
 
-Each user has:
+In this extension, the system introduces **user accounts**, **login functionality**, and
+a **permission-based access control system**.  
+Instead of allowing every user to access all features, each user is granted specific
+permissions that control what they can see and do inside the system.
 
-- Username
-- Password
-- Permissions (bitmask or flags)
+This extension focuses on **system design and security**, not on adding new client features.
 
-Example permissions:
+---
+
+## 🧠 System Architecture (High-Level)
+
+The application follows this hierarchy:
+
+1. **Login System**
+   - Authenticate users using username & password
+   - Load user data from a file
+   - Set the current logged-in user
+
+2. **Main Menu**
+   - Client Management (permission-based)
+   - Transactions
+   - User Management (Admin only)
+   - Logout
+
+3. **User Management Module**
+   - Add users
+   - Delete users
+   - Update users
+   - Find users
+   - Assign permissions
+
+4. **Permission Control Layer**
+   - Each action is checked before execution
+   - Access denied message shown if permission is missing
+
+---
+
+## 🔐 Authentication & Authorization
+
+### Authentication
+- Users must log in using a **username and password**
+- Credentials are validated from a text file
+- Login repeats until valid credentials are provided
+
+### Authorization
+- Each user has a **permission value (integer)**
+- Permissions are implemented using **bitmasking**
+- Before accessing any feature, the system checks:
+  - Does the user have permission?
+- Admin users have full access using permission value `-1`
+
+---
+
+## 👥 User Management Features
+
+- Add new users
+- Delete existing users
+- Update user data
+- Find users by name
+- Assign permissions dynamically
+- Prevent duplicate usernames
+
+---
+
+## 📂 Data Storage
+
+- **Clients** are stored in a separate file
+- **Users** are stored in a dedicated users file
+- Data is loaded into memory, modified, then saved back to files
+- Deleted users are marked first, then excluded when saving
+
+---
+
+## 🧩 Permissions Model
+
+Permissions are handled using an enum + bitmask logic:
+
 - Show clients
 - Add clients
 - Delete clients
 - Update clients
-- Transactions
-- Full access (Admin)
+- Find clients
+- Transactions menu
+- Manage users
+
+Each permission is checked at runtime before showing menus or executing operations.
 
 ---
 
-### 📂 Data Storage
+## 🎯 Purpose of This Extension
 
-- **users.txt** → stores system users
-- **clients.txt** → stores bank clients
+The goal of Extension 3 is to practice and demonstrate:
 
-Each file uses a structured delimiter-based format.
+- Authentication systems
+- Authorization logic
+- Permission handling using bitmask
+- Secure menu navigation
+- Separation between system users and bank clients
+- Thinking in terms of **system-level design**
 
----
-
-### 🔑 Authentication Flow
-
-1. Program starts
-2. Login screen is displayed
-3. Username & password are validated
-4. User permissions are loaded
-5. Menu options are enabled/disabled based on permissions
+This extension reflects real-world backend concepts commonly used in professional software.
 
 ---
 
-### 🧠 Authorization Logic
 
-Before executing any operation:
+## 🚀 Learning Outcome
 
-- The system checks the logged-in user's permissions
-- If permission is missing → access is denied
-- Admin users have full access
-
----
-
-### 🧱 Design Goals of Extension 3
-
-- Separate **authentication logic** from business logic
-- Prevent unauthorized access
-- Simulate real-world banking systems
-- Prepare the codebase for OOP refactoring
+By completing this extension, I practiced:
+- Designing multi-user systems
+- Implementing role-based access control
+- Managing system state securely
+- Building scalable console applications
 
 ---
 
-## 🎯 Learning Objectives
-
-By the end of Extension 3, the project demonstrates:
-
-- Real-world console application flow
-- File-based authentication system
-- Permission-based access control
-- Clean separation of responsibilities
-- Scalable design ready for OOP
-
----
-
-## 🚀 Future Improvements
-
-- Convert `struct` logic into classes
-- Apply SOLID principles
-- Replace text files with a database
-- Add logging and audit trails
-- Improve UI and error handling
-
----
-
-## 🧠 Author
-
-**Hossam ElSayed**  
-Faculty of Computers – Backend Track  
-Focused on mastering core programming concepts before frameworks
-
----
+**Author:** Hossam  Gholam
+**Language:** C++  
+**Concepts:** File Handling, Functions, Enums, Structs, Bitmask, System Design
