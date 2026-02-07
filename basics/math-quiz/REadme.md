@@ -42,13 +42,7 @@ This project was created to practice core C++ programming concepts such as:
 
 ---
 
-## ▶️ How to Run
-1. Open the project using Visual Studio
-2. Build the solution
-3. Run the program from the console
-4. Follow the on-screen instructions
 
----
 
 ## 🧠 Concepts Practiced
 - `enum` for difficulty levels and operations
