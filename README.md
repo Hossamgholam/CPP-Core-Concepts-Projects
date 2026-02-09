@@ -32,7 +32,7 @@ and demonstrate abstraction and clean logic design.
 - Math library
 - Date library
 - Utility library
- _[Find Here](Algorithms/library)
+-[Find all Here](Algorithms/library)
 
 Each module is implemented using classes and namespaces and can be reused
 across multiple projects.
