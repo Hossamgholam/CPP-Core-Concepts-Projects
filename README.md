@@ -27,10 +27,12 @@ Console-based applications focusing on core C++ syntax, logic, and flow control.
 Reusable utility classes and namespaces that solve common programming problems
 and demonstrate abstraction and clean logic design.
 
-- Input Validation Utilities
-- String Utilities
-- Math Utilities
-- Date Utilities
+- Input Validation library
+- String library
+- Math library
+- Date library
+- Utility library
+- [Find Here](Algorithms)
 
 Each module is implemented using classes and namespaces and can be reused
 across multiple projects.
