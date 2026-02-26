@@ -2,6 +2,33 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+/*
+	Class: clsString
+
+	Description:
+	A reusable string utility class that provides a wide collection
+	of common string manipulation operations.
+
+	This class is designed to support problem solving and algorithmic
+	challenges by offering ready-to-use string helpers, including:
+
+	- Case manipulation (upper, lower, invert case)
+	- Word and letter analysis (counting letters, words, vowels)
+	- String formatting (trim, join, split)
+	- Word replacement with optional case sensitivity
+	- Punctuation removal
+	- First-letter capitalization utilities
+
+	Design Notes:
+	- Supports both static utility-style usage and object-oriented usage.
+	- Internally stores a string value while also allowing external strings.
+	- Intended for reuse across multiple projects and libraries.
+	- Acts as a foundational helper for other utilities such as clsDate.
+
+	This class represents the Algorithms & Problem Solving phase
+	of the C++ learning journey.
+*/
+
 class clsString
 {
 private:
@@ -21,7 +48,7 @@ public:
 		return _value;
 	}
 
-	
+
 	__declspec(property(get = getValue, put = setValue))string value;
 
 	static void fristChar(string name) {
@@ -321,7 +348,6 @@ public:
 	}
 
 };
-
 
 
 

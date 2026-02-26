@@ -19,6 +19,9 @@
     <Filter Include="Header Files\String">
       <UniqueIdentifier>{e39906dc-ec8b-41bc-93e4-3be76fe2b926}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\CMathe">
+      <UniqueIdentifier>{c8f938f0-6a5c-4e4e-ae32-ed7e98eb315f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library.cpp">
@@ -31,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="clsString.h">
       <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmathe.h">
+      <Filter>Header Files\CMathe</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

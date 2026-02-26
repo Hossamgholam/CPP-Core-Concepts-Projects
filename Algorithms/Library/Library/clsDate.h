@@ -1,4 +1,3 @@
-
 #pragma once
 #pragma warning(disable:4996)
 #include<iostream>
@@ -7,6 +6,34 @@
 #include<vector>
 #include<ctime>
 using namespace std;
+
+
+/*
+    Class: clsDate
+
+    Description:
+    A comprehensive date utility class designed to handle all common
+    date-related operations in a reusable and centralized way.
+
+    This class provides functionality for:
+    - Creating dates using different constructors (system date, string, day order)
+    - Validating dates (day, month, year)
+    - Date comparison (before, after, equal)
+    - Date arithmetic (add / subtract days, weeks, months, years, decades, centuries)
+    - Calendar generation (monthly and yearly calendars)
+    - Business day calculations (weekends, vacations, working days)
+    - Converting dates to readable string formats
+
+    Design Notes:
+    - Uses both static and non-static methods to support procedural
+      and object-oriented usage.
+    - Designed as a reusable utility during the Algorithms & Problem Solving phase.
+    - Depends on clsString for string splitting and parsing.
+
+    This class is intended to be used as a core date engine
+    across multiple projects and problem-solving scenarios.
+*/
+
 class clsDate
 {
 private:
