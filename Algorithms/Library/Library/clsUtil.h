@@ -7,32 +7,34 @@
 #include<fstream>
 using namespace std;
 /*
-    Class: clsInputValidate
+    Class: clsUtil
 
     Description:
-    A utility class responsible for handling safe user input
-    and validating numeric and date values.
+    A comprehensive utility class that provides helper functions
+    for random generation, encryption, arrays, matrices, and
+    number-based algorithms.
 
-    This class centralizes all input validation logic to:
-    - Prevent invalid numeric entries
-    - Ensure numbers fall within specific ranges
-    - Validate date objects using clsDate
-    - Check if a date falls within a specific period
+    This class acts as a general-purpose toolkit to support
+    problem solving, algorithmic exercises, and small-scale
+    system utilities.
 
-    Features:
-    - Safe integer and double reading
-    - Range validation using templates
-    - Date validation through clsDate integration
-    - Date range checking
+    Covered Areas:
+    - Random number and character generation
+    - Key and word generation
+    - Simple character-shift encryption/decryption
+    - Array operations (shuffle, copy, search, palindrome check)
+    - Matrix operations (sum, comparison, identity, scalar checks)
+    - Number theory utilities (perfect number, palindrome, frequency)
 
     Design Notes:
-    - Implemented using static methods for global accessibility.
-    - Uses templates to support generic numeric range validation.
-    - Works as a bridge between user input and business logic.
-    - Depends on clsDate and clsString libraries.
+    - Implemented entirely with static methods.
+    - Designed for algorithm practice and foundational mastery.
+    - Acts as a dependency for other libraries such as
+      clsInputValidate and clsDate.
+    - Emphasizes manual implementation over STL reliance.
 
-    This class represents the Validation Layer
-    in the C++ Core Concepts learning path.
+    This class represents the Advanced Algorithms &
+    Utility Layer in the C++ Core Concepts learning journey.
 */
 class clsUtil
 {
