@@ -22,6 +22,9 @@
     <Filter Include="Header Files\CMathe">
       <UniqueIdentifier>{c8f938f0-6a5c-4e4e-ae32-ed7e98eb315f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Input Validation">
+      <UniqueIdentifier>{00b2d662-07e0-45e9-a6b4-45ade350e1af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library.cpp">
