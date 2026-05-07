@@ -1,162 +1,288 @@
-# 📘 OOP as it Should Be – Applications  
-### From OOP Concepts to Real Applications
+# 🏦 Bank Management System (C++)
+
+![C++](https://img.shields.io/badge/Language-C%2B%2B-blue)
+![OOP](https://img.shields.io/badge/Paradigm-OOP-green)
+![Platform](https://img.shields.io/badge/Platform-Console-lightgrey)
+![Storage](https://img.shields.io/badge/Storage-Text%20Files-orange)
+![Status](https://img.shields.io/badge/Project-Completed-success)
+
+A **Console Bank Management System** developed using **C++ and Object-Oriented Programming (OOP)**.
+
+The project simulates a simple banking environment where administrators can manage clients, perform financial transactions, manage system users, and track system activity logs.
 
 ---
 
-## 🗝️ About This Course
+# 🚀 Features
 
-This is the eleventh course in my programming journey.
+### Client Management
 
-Before reaching this stage, I completed the following foundations:
+* Add new clients
+* Update client information
+* Delete clients
+* Find clients
+* List all clients
 
-1️⃣ Programming Foundations – Level 1  
-2️⃣ Algorithms & Problem Solving – Level 1  
-3️⃣ Introduction to Programming with C++ – Level 1  
-4️⃣ Algorithms & Problem Solving – Level 1 (Clean Code Solutions)  
-5️⃣ Algorithms & Problem Solving – Level 2  
-6️⃣ Introduction to Programming Using C++ – Level 2  
-7️⃣ Algorithms & Problem Solving – Level 3  
-8️⃣ Algorithms & Problem Solving – Level 4  
-9️⃣ Foundations – Level 2  
-🔟 OOP as it Should Be – Concepts  
+### Transactions
 
-At this point in the roadmap, programming stopped being just about writing code.
+* Deposit money
+* Withdraw money
+* Transfer money between clients
+* Calculate total bank balances
 
-I already understood:
+### User Management
 
-- How computers represent and process data  
-- How to solve problems using algorithms  
-- How to write clean and maintainable code  
-- How to control complexity using functions and procedures  
-- How memory, pointers, references, and files work  
-- Why Object-Oriented Programming exists and when to use it  
+* Add new users
+* Update users
+* Delete users
+* Permission-based access control
 
-The next step was clear:
+### Logs
 
-> **Use OOP to build real systems.**
+* Login register history
+* Transfer log history
 
----
+### Currency Exchange
 
-# 🎯 Purpose of This Course
-
-This course is where OOP moves from **concepts** to **real applications**.
-
-Instead of studying definitions, the focus shifts to building complete systems and learning how OOP helps manage complexity in real software.
-
-The goal is not just writing classes.
-
-The goal is designing **structured, maintainable, and extendable applications**.
+* Currency conversion system
 
 ---
 
-# 🔐 What Makes This Course Different
+# 🏗️ Project Architecture
 
-This course is fully **application-driven**.
+The system is designed using a **layered architecture**.
 
-It focuses on:
-
-- Building real projects instead of small demos  
-- Structuring systems using OOP principles  
-- Separating responsibilities between components  
-- Designing code that can be extended safely  
-
-OOP here becomes a **tool for controlling complexity**, not just a programming style.
-
----
-
-# 🧠 Key Skills Developed
-
-During this course I learned how to:
-
-- Design applications using object-oriented thinking  
-- Organize systems into clear responsibilities  
-- Apply encapsulation and abstraction in real code  
-- Structure projects in a way that remains understandable even months later  
-- Extend systems without breaking existing functionality  
-- Build modular features that integrate into a larger system  
-
-One of the most important lessons was seeing how **good structure allows a project to remain understandable even after long periods of time.**
+```
+Bank Management System
+│
+├── UI Layer (Screens)
+├── Business Logic Layer
+├── Utility Classes
+└── Data Storage (Text Files)
+```
 
 ---
 
-# 🏗️ Major Projects
+# 🏗️ System Architecture Diagram
 
-This course included building several practical systems.
-
-### Utility Library
-A reusable library of helper tools used across the project.
-
-### Input & Validation Library
-A dedicated module for validating user input and controlling program behavior safely.
-
-### Bank Management System
-A complete application including:
-
-- Client management  
-- Account transactions (withdraw, deposit, balance tracking)  
-- User management  
-- Permission system  
-- Login system with logging and auditing  
-
-### Currency Exchange System
-An additional system that allows:
-
-- Listing currencies  
-- Searching for currencies  
-- Updating exchange rates  
-- Currency conversion calculations  
-
-These projects simulate how real systems grow over time by adding features and modules.
+```
+User
+ │
+ ▼
+UI Screens
+(clsScreen and derived classes)
+ │
+ ▼
+Business Logic
+(clsBankClient, clsUser, clsPerson)
+ │
+ ▼
+Utility Classes
+(clsString, clsDate, clsUtil, clsInputValidate)
+ │
+ ▼
+Data Storage
+(Text Files)
+```
 
 ---
 
-# 🧱 Architecture Thinking
+# 🧠 Business Logic Classes
 
-While building the system, the project naturally evolved into a layered structure:
+## clsPerson
 
-Presentation Layer  
-Handles screens, menus, and user interaction.
+Base class representing general person information.
 
-Business Logic Layer  
-Contains classes such as Client, User, and system operations.
-
-Storage Layer  
-Handles data persistence through files.
-
-This structure made the project easier to understand, maintain, and extend.
-
-Even after several months, it remains easy to navigate and update.
+```
+FirstName
+LastName
+Email
+Phone
+```
 
 ---
 
-# 🎓 Learning Outcome
+## clsBankClient
 
-After completing this course, I can:
+Represents a bank client.
 
-- Build real applications using object-oriented design  
-- Structure systems in a way that supports growth and change  
-- Separate responsibilities between components  
-- Implement permissions, validation, and logging systems  
-- Extend applications without rewriting large parts of the code  
+Main operations:
 
-This course represents the moment where OOP became **practical engineering instead of theoretical knowledge.**
-
----
-
-# 🧠 Reflection
-
-One important realization from this course is that:
-
-> Good structure allows you to return to a project months later and still understand it.
-
-The goal of OOP is not writing classes.
-
-The goal is building systems that remain **clear, maintainable, and extendable over time.**
+* Find client
+* Add client
+* Update client
+* Delete client
+* Deposit
+* Withdraw
+* Transfer
+* Get total balances
 
 ---
 
-## 🚀 Result
+## clsUser
 
-After this course, I am no longer only solving problems.
+Represents a system user.
 
-I am designing systems.
+Responsibilities:
+
+* Login authentication
+* Permission control
+* User management
+* Login activity logging
+
+---
+
+# 🔐 Permission System
+
+The system uses **bitmask permissions** to control access.
+
+Example permissions:
+
+```
+Show Client List
+Add Client
+Delete Client
+Update Client
+Find Client
+Transactions
+Manage Users
+Login Register
+```
+
+Each user may have different access rights.
+
+---
+
+# 🛠 Utility Classes
+
+Helper classes used across the system.
+
+```
+clsString
+clsDate
+clsUtil
+clsInputValidate
+```
+
+Examples:
+
+* String splitting
+* Date formatting
+* Input validation
+* Random generation
+
+---
+
+# 💾 Data Storage
+
+The system uses **text files as a simple database**.
+
+Files used:
+
+```
+Clients.txt
+Users.txt
+TransferLog.txt
+LoginRegister.txt
+```
+
+---
+
+## Clients File Format
+
+```
+FirstName#//#LastName#//#Email#//#Phone#//#AccountNumber#//#PinCode#//#Balance
+```
+
+Example:
+
+```
+Ali#//#Hassan#//#ali@mail.com#//#012345#//#A100#//#1234#//#5000
+```
+
+---
+
+# 📁 Project Structure
+
+```
+BankManagementSystem
+│
+├── Screens
+│   ├── clsScreen.h
+│   ├── clsMainScreen.h
+│   ├── clsShowLoginScreen.h
+│
+├── Core Classes
+│   ├── clsPerson.h
+│   ├── clsBankClient.h
+│   ├── clsUser.h
+│
+├── Utilities
+│   ├── clsString.h
+│   ├── clsDate.h
+│   ├── clsUtil.h
+│   ├── clsInputValidate.h
+│
+├── Data Files
+│   ├── Clients.txt
+│   ├── Users.txt
+│   ├── TransferLog.txt
+│   ├── LoginRegister.txt
+│
+└── main.cpp
+```
+
+---
+
+# 📸 System Screenshots
+
+### Login Screen
+
+![Login](screenshots/login.png)
+
+---
+
+### Main Menu
+
+![Main Menu](screenshots/main-menu.png)
+
+---
+
+
+### Transactions
+
+![Transactions](screenshots/transactions.png)
+
+---
+### user List
+
+![User List](screenshots/user-list.png)
+
+---
+### currency Exchange List
+
+![currency list](screenshots/currency-list.png)
+
+---
+
+# 🧰 Technologies Used
+
+```
+C++
+Object-Oriented Programming (OOP)
+File Handling
+STL (vector, string)
+Console Application
+```
+
+---
+
+# 👨‍💻 Author
+
+**Hossam El-Side Salim Gholam**
+
+Computer Science Student
+Backend Development Path (.NET)
+
+---
+
+⭐ If you find this project useful, feel free to star the repository.
