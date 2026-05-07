@@ -54,7 +54,7 @@ computer science foundations.
 Full applications designed using object-oriented principles such as
 encapsulation, abstraction, and responsibility separation.
 
-- [Bank Management System](oop/bank-management-system)
+- [Bank Management System](oop/management-system)
 
 ---
 
